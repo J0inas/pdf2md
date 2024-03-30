@@ -16,28 +16,28 @@ print(current_modules)
 module_name = "a module" 
 
 module_name = input()
-print("Very well then." + "\n")
+print(f"Very well then, {module_name} it is." + "\n")
     
 print("Please drag your file name into the console.")
 
 pdf_name_and_path = input()
 pages = convert_from_path(pdf_name_and_path.replace("'", ""))
+# TODO: Add a check here if the file was found // shouldnt be a problem tho if you drag it in
+
+print ("\n" + "Which lecture is this? Please enter a number like so '07'")
+
+lecture_number = input()
+
+print("\n" + "Oh and what is the name of the lecture? Please enter its name")
+# TODO: Add option to not get the lecture number
+lecture_title = input ()
+
+print ("Almost done now." + "\n")
 
 for slides_num, page in enumerate(pages):
     page.save(f'{md_path}{module_name} {lecture_number} - {slides_num}.png', 'PNG')
     
 print ("File sucessfully turned into PNGs." + "\n")
-
-print ("Almost done now." + "\n")
-
-print ("Which lecture is this? Please enter a number like so '07'" + "\n")
-
-lecture_number = input()
-
-print("Oh and what is the name of the lecture? Please enter its name" + "\n")
-# TODO: Add option to not get the lecture number
-
-lecture_title = input ()
 
 # TODO: A summary of all my inputs to check if it was correct and then type "y" to proceed or "n" to restart the process.
 # print ("Great, to sum it up: ")
