@@ -35,9 +35,12 @@ print ("Which lecture is this? Please enter a number like so '07'" + "\n")
 lecture_number = input()
 
 print("Oh and what is the name of the lecture? Please enter its name" + "\n")
+# TODO: Add option to not get the lecture number
 
 lecture_title = input ()
 
+# TODO: A summary of all my inputs to check if it was correct and then type "y" to proceed or "n" to restart the process.
+# print ("Great, to sum it up: ")
 md_path += f"/ {lecture_number} {lecture_title}.md"
 
 # open markdown file and write content:
