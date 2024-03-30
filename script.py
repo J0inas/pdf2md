@@ -1,4 +1,3 @@
-import os
 from pdf2image import convert_from_path
 
 # this variable should not be changed in the process
