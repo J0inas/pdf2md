@@ -1,8 +1,9 @@
 from pdf2image import convert_from_path
 
 # this variable should not be changed in the process
-# md_path = "/Users/joinas/Documents/Obsidian/Life"
-md_path = "/Users/joinas/Documents/Uni/Semester 8/pdf2md/"
+md_path = "/Users/joinas/Documents/Obsidian/Life/"
+# local path
+# md_path = "/Users/joinas/Documents/Uni/Semester 8/pdf2md/"
 # gets changed in the process
 pdf_name_and_path = ".pdf"
 lecture_title = "title"
@@ -41,7 +42,7 @@ print ("File sucessfully turned into PNGs." + "\n")
 
 # TODO: A summary of all my inputs to check if it was correct and then type "y" to proceed or "n" to restart the process.
 # print ("Great, to sum it up: ")
-md_path += f"/ {lecture_number} {lecture_title}.md"
+md_path += f"{lecture_number} {lecture_title}.md"
 
 # open markdown file and write content:
 with open(md_path, 'w') as file:
@@ -50,3 +51,4 @@ with open(md_path, 'w') as file:
 
 # print completion message
 print('\rFile created succesfully.')
+print("\n Filepath:" + md_path)
